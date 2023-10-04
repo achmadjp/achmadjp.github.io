@@ -72,6 +72,7 @@ const timer = () => {
 };
 
 const buka = async () => {
+    window.scrollTo(0, 0);
     document.getElementById('tombol-musik').style.display = 'block';
     audio.play();
     AOS.init();
@@ -751,6 +752,12 @@ const opacity = () => {
 const modalFoto = (img) => {
     let modal = new bootstrap.Modal('#modalFoto');
     document.getElementById('showModalFoto').src = img.src;
+    modal.show();
+};
+
+const modalFotoProfile = () => {
+    let modal = new bootstrap.Modal('#modalFoto');
+    document.getElementById('showModalFoto').src = "assets/images/profile.jpg";
     modal.show();
 };
 
